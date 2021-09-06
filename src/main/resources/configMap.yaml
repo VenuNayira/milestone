@@ -2,7 +2,6 @@
 kind: ConfigMap
 metadata:
   name: mysql-configmap
-type: Opaque
 data:
   host: mysql
   name: milestoneassessment
