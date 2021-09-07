@@ -1,9 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: springboot-k8s-mysql
+  name: springboot
   labels:
-    name: springboot-k8s-mysql
+    name: springboot
 spec:
   ports:
     - nodePort: 30163 
@@ -11,26 +11,26 @@ spec:
       targetPort: 8080  
       protocol: TCP
   selector:           
-    app: springboot-k8s-mysql
+    app: springboot
   type: NodePort       
 
 ---
 apiVersion: apps/v1 
 kind: Deployment    
 metadata:              
-  name: springboot-k8s-mysql
+  name: springboot
 spec:                
   selector:         
     matchLabels:
-      app: springboot-k8s-mysql
+      app: springboot
   replicas: 3        
   template:
     metadata:
       labels:        
-        app: springboot-k8s-mysql
+        app: springboot
     spec:
       containers:
-        - name: springboot-k8s-mysql
+        - name: springboot
           image: venunayira/milestone:latest
           ports:
             - containerPort: 8080                
@@ -38,21 +38,21 @@ spec:
           - name: DB_HOST   # Setting Database host address from configMap
             valueFrom: 
               configMapKeyRef:
-                name: configMap  # name of configMap
+                name: mysql-configmap  # name of configMap
                 key: host
           - name: DB_NAME  # Setting Database name from configMap
             valueFrom:
               configMapKeyRef:
-                name: configMap 
+                name: mysql-configmap 
                 key: name
           - name: DB_USERNAME  # Setting Database username from Secret
             valueFrom:
               secretKeyRef:
-                name: secret # Secret Name
+                name: mysql-secret # Secret Name
                 key: username
           - name: DB_PASSWORD # Setting Database password from Secret
             valueFrom:
               secretKeyRef:
-                name: secret
-                key: password     
+                name: mysql-secret
+                key: password
         

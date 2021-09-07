@@ -9,7 +9,7 @@ metadata:
 spec:
   ports:
     - port: 3306
-      targetPort: 3306
+      targetPort: 3307
   selector:       # mysql Pod Should contain same labels
     app: mysql
     tier: database
@@ -52,28 +52,23 @@ spec:
         tier: database
     spec:
       containers:
-      - image: mysql:5.7 # image from docker-hub
+      - image: mysql:8 # image from docker-hub
         args:
           - "--ignore-db-dir=lost+found" # Workaround for https://github.com/docker-library/mysql/issues/186
         name: mysql 
         env:
-        - name: MYSQL_USER # Setting USER username on mysql From a 'Secret'
+        - name: MYSQL_ROOT_PASSWORD # Setting USER Password on mysql From a 'Secret'
           valueFrom:
             secretKeyRef:
-              name: secret
-              key: username
-        - name: MYSQL_PASSWORD # Setting USER Password on mysql From a 'Secret'
-          valueFrom:
-            secretKeyRef:
-              name: secret
+              name: mysql-root-secret
               key: password
         - name: MYSQL_DATABASE # Setting Database Name from a 'ConfigMap'
           valueFrom:
             configMapKeyRef:
-              name: configMap
+              name: mysql-configmap
               key: name
         ports:
-        - containerPort: 3306
+        - containerPort: 3307
           name: mysql
         volumeMounts:        # Mounting voulume obtained from Persistent Volume Claim
         - name: mysql-persistent-storage
