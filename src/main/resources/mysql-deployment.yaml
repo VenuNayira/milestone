@@ -52,9 +52,7 @@ spec:
         tier: database
     spec:
       containers:
-      - image: mysql:8 # image from docker-hub
-        args:
-          - "--ignore-db-dir=lost+found" # Workaround for https://github.com/docker-library/mysql/issues/186
+      - image: mysql:latest # image from docker-hub
         name: mysql 
         env:
         - name: MYSQL_ROOT_PASSWORD # Setting USER Password on mysql From a 'Secret'
