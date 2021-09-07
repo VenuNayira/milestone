@@ -4,12 +4,7 @@ spring:
         url: jdbc:mysql://${DB_HOST}/${DB_NAME}?useSSL=false
         username: ${DB_USERNAME}
         password: ${DB_PASSWORD}
-        hikari:
-            minimumIdle: 2
-            maximumPoolSize: 10
-            idleTimeout: 120000
-            connectionTimeout: 300000
-            leakDetectionThreshold: 300000        
+        
     jpa:
         database-platform: org.hibernate.dialect.MySQL8Dialect
         generate-ddl: true
