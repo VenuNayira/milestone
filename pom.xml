@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.mindtree</groupId>
 	<artifactId>milestone-assessment-one</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>milestone-assessment-one</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -32,7 +32,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:VenuNayira/milestone.git</connection>
 		<developerConnection>scm:git:git@github.com:VenuNayira/milestone.git</developerConnection>
-		<url>git@github.com:VenuNayira/milestone.git</url>
+		<url>https://github.com/VenuNayira/milestone.git</url>
 		<tag>v0.0.1</tag>
 	</scm>
 
