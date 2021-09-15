@@ -33,11 +33,7 @@
 		<connection>scm:git:https://github.com/VenuNayira/milestone.git</connection>
 		<developerConnection>scm:git:https://github.com/VenuNayira/milestone.git</developerConnection>
 		<url>https://github.com/VenuNayira/milestone.git</url>
-<<<<<<< HEAD
 		<tag>0.0.3</tag>
-=======
-		<tag>v0.0.1</tag>
->>>>>>> 7c1dc7019db4901c00025535ef0706ceb1261c9f
 	</scm>
 
 
