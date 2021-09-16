@@ -40,7 +40,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:VenuNayira/milestone.git</connection>
 		<developerConnection>scm:git:git@github.com:VenuNayira/milestone.git</developerConnection>
-		<url>git@github.com:VenuNayira/milestone.git</url>
+		<url>https://github.com/VenuNayira/milestone.git</url>
 		<tag>HEAD</tag>
 	</scm>
 
