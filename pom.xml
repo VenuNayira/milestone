@@ -39,7 +39,7 @@
 
 	<scm>
 		<connection>scm:git:https://github.com/VenuNayira/milestone.git</connection>
-		<developerConnection>scm:git:ssh://https://github.com/VenuNayira/milestone.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/VenuNayira/milestone.git</developerConnection>
 		<url>https://github.com/VenuNayira/milestone.git</url>
 		<tag>HEAD</tag>
 	</scm>
