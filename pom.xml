@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.mindtree</groupId>
 	<artifactId>milestone-assessment-one</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5-SNAPSHOT</version>
 
 	<name>milestone-assessment-one</name>
 	<description>Demo project for Spring Boot</description>
