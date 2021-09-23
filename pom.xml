@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.mindtree</groupId>
 	<artifactId>milestone-assessment-one</artifactId>
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.0</version>
 
 	<name>milestone-assessment-one</name>
 	<description>Demo project for Spring Boot</description>
@@ -57,11 +57,6 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 		    <groupId>mysql</groupId>
