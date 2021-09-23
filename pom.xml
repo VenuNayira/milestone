@@ -19,15 +19,16 @@
 		<java.version>11</java.version>
 	</properties>
 
+
 	<distributionManagement>
 		<repository>
-			<id>release</id>
-			<name>releases</name>
+			<id>central</id>
+			<name>NexusLite-PC-releases</name>
 			<url>http://localhost:8081/artifactory/venu-libs-release-local</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshot</id>
-			<name>snapshots</name>
+			<id>snapshots</id>
+			<name>NexusLite-PC-snapshots</name>
 			<url>http://localhost:8081/artifactory/venu-libs-snapshot-local</url>
 		</snapshotRepository>
 	</distributionManagement>
@@ -59,9 +60,9 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    </dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
