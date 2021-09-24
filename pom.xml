@@ -20,18 +20,6 @@
 	</properties>
 
 
-	<distributionManagement>
-		<repository>
-			<id>release</id>
-			<name>releases</name>
-			<url>http://localhost:8081/artifactory/venu-libs-release-local</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshot</id>
-			<name>snapshots</name>
-			<url>http://localhost:8081/artifactory/venu-libs-snapshot-local</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<scm>
 		<connection>scm:git:git@github.com:VenuNayira/milestone.git</connection>
@@ -109,5 +97,18 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>NexusLite-PC-releases</name>
+			<url>http://localhost:8081/artifactory/venu-libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>NexusLite-PC-snapshots</name>
+			<url>http://localhost:8081/artifactory/venu-libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
