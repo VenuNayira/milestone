@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: customer-data
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: customer-data
+  template:
+    metadata:
+      labels:
+        app: customer-data
+    spec:
+      imagePullSecrets: 
+      - name: secret-customer-docker
+      containers:
+      - name: customer-app
+        image: venunayira/milestone:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: customer-app-service
+spec:
+    type: LoadBalancer
+    ports:
+    - protocol: TCP
+      port: 8080
+    selector:
+      app: customer-data
