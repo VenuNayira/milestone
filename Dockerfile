@@ -1,4 +1,4 @@
 FROM openjdk:11
-EXPOSE 9191
+EXPOSE 8080
 ADD target/*.jar milestone.jar
 ENTRYPOINT ["java","-jar","/milestone.jar"]
