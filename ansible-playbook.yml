@@ -1,0 +1,12 @@
+---
+- name: Playbook to share files with ansible-node
+  hosts: ansible-node
+  remote_user: root
+  become: true
+  tasks:
+    - name: Download artifactory script
+      get_url:
+        url: http://172.31.64.1:8082/artifactory/venu-libs-release-local/com/mindtree/milestone-assessment-one/1.0.0/milestone-assessment-one-1.0.0.jar
+        url_username: admin
+        url_password: AKCp8k7uaUrNhqwKEYS6wVNJq17fe7XN3G4Xc1KB3RupriZwaYuc9uZ6zb8e55fRU9e8goEiU
+        dest: /home/venu/milestone-assessment-one-1.0.0.jar
